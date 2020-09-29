@@ -1,5 +1,5 @@
 import React from "react";
-import { useQuery } from "@apollo/react-hooks";
+import { useQuery, useMutation } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
 
 const GET_TODOS = gql`
@@ -14,6 +14,7 @@ const GET_TODOS = gql`
 
 function App() {
   const { data, loading, error } = useQuery(GET_TODOS);
+  cosnt = useMutation();
   if (loading) return <div>Loading....</div>;
   if (error) return <div>Error</div>;
   return (
